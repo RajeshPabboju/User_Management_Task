@@ -1,0 +1,14 @@
+html, body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  .parent {
+    height: 100vh;
+    margin: 0px !important;
+    padding: 0px !important;
+  }
