@@ -17,34 +17,34 @@ export class UserProfileComponent implements OnInit {
     this.getUserProfiles();
   }
 
-  getUserProfiles(){
-    this.userAPIService.getUserProfiles().subscribe((res:any) => {
+  getUserProfiles() {
+    this.userAPIService.getUserProfiles().subscribe((res: any) => {
       this.userProfiles = res;
     })
   }
 
-  confirm(user:UserProfile) {
+  confirm(user: UserProfile) {
     this.confirmationService.confirm({
       message: 'Are you sure that you want to perform this action?',
       accept: () => {
-        this.userAPIService.deleteUserProfile(user).subscribe((res)=>{
+        this.userAPIService.deleteUserProfile(user).subscribe((res) => {
           this.getUserProfiles();
         })
       }
     });
   }
 
-  show(actionType: string,selectedUSer?:UserProfile) {
+  show(actionType: string, selectedUSer?: UserProfile) {
     const ref = this.dialogService.open(SharedComponent, {
       data: {
         buttonName: actionType === 'add' ? 'SAVE USER' : 'UPDATE USER',
-        selectedUSer:selectedUSer
+        selectedUSer: selectedUSer
       },
       header: 'Add User Profile Here',
       width: '40%'
     });
 
-    ref.onClose.subscribe(()=>{
+    ref.onClose.subscribe(() => {
       this.getUserProfiles();
     })
   }

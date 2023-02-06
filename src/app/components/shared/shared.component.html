@@ -1,28 +1,44 @@
 <form [formGroup]="userProfileForm">
-    <div class="mb-3 mt-3">
-      <label for="id" class="form-label">ID:</label>
-      <input formControlName="id" type="text" [class.in-valid]="userProfileFormControl.id.touched && userProfileFormControl.id.invalid" class="form-control" id="id" placeholder="Enter ID" name="id" required>
-      <div *ngIf="userProfileFormControl.id.touched && userProfileFormControl.id.invalid" class="text-danger">Please Enter ID</div>
-    </div>
-    <div class="mb-3">
-      <label for="userName" class="form-label">UserName:</label>
-      <input formControlName="empName" type="text" [class.in-valid]="userProfileFormControl.empName.touched && userProfileFormControl.empName.invalid" class="form-control" id="userName" placeholder="Enter User Name" name="userName" required>
-      <div *ngIf="userProfileFormControl.empName.touched && userProfileFormControl.empName.invalid" class="text-danger">Please Enter User Name</div>
-    </div>
-    <div class="mb-3">
-        <label for="userCode" class="form-label">User Code:</label>
-        <input formControlName="empCode" type="text" [class.in-valid]="userProfileFormControl.empCode.touched && userProfileFormControl.empCode.invalid" class="form-control" id="userCode" placeholder="Enter User Code" name="userCode" required>
-        <div *ngIf="userProfileFormControl.empCode.touched && userProfileFormControl.empCode.invalid" class="text-danger">Please Enter User Code</div>
-      </div>
-      <div class="mb-3">
-        <label for="designation" class="form-label">Designation:</label>
-        <input formControlName="designation" type="text" [class.in-valid]="userProfileFormControl.designation.touched && userProfileFormControl.designation.invalid" class="form-control" id="designation" placeholder="Enter Designation" name="designation" required>
-        <div *ngIf="userProfileFormControl.designation.touched && userProfileFormControl.designation.invalid" class="text-danger">Please Enter Designation</div>
-      </div>
-      <div class="mb-3">
-        <label for="location" class="form-label">Location:</label>
-        <input formControlName="location" type="text" [class.in-valid]="userProfileFormControl.location.touched && userProfileFormControl.location.invalid" class="form-control" id="location" placeholder="Enter Location" name="location" required>
-        <div *ngIf="userProfileFormControl.location.touched && userProfileFormControl.location.invalid" class="text-danger">Please Enter Location</div>
-      </div>
-    <button [disabled]="!userProfileForm.valid" (click)="postUserProfile()" type="submit" class="btn btn-primary">{{buttonName}}</button>
-  </form>
+  <div class="mb-3 mt-3">
+    <label for="id" class="form-label">ID:</label>
+    <input formControlName="id" type="text"
+      [class.in-valid]="userProfileFormControl.id.touched && userProfileFormControl.id.invalid" class="form-control"
+      id="id" placeholder="Enter ID" name="id" required>
+    <div *ngIf="userProfileFormControl.id.touched && userProfileFormControl.id.invalid" class="text-danger">Please Enter
+      ID</div>
+  </div>
+  <div class="mb-3">
+    <label for="userName" class="form-label">UserName:</label>
+    <input formControlName="empName" type="text"
+      [class.in-valid]="userProfileFormControl.empName.touched && userProfileFormControl.empName.invalid"
+      class="form-control" id="userName" placeholder="Enter User Name" name="userName" required>
+    <div *ngIf="userProfileFormControl.empName.touched && userProfileFormControl.empName.invalid" class="text-danger">
+      Please Enter User Name</div>
+  </div>
+  <div class="mb-3">
+    <label for="userCode" class="form-label">User Code:</label>
+    <input formControlName="empCode" type="text"
+      [class.in-valid]="userProfileFormControl.empCode.touched && userProfileFormControl.empCode.invalid"
+      class="form-control" id="userCode" placeholder="Enter User Code" name="userCode" required>
+    <div *ngIf="userProfileFormControl.empCode.touched && userProfileFormControl.empCode.invalid" class="text-danger">
+      Please Enter User Code</div>
+  </div>
+  <div class="mb-3">
+    <label for="designation" class="form-label">Designation:</label>
+    <input formControlName="designation" type="text"
+      [class.in-valid]="userProfileFormControl.designation.touched && userProfileFormControl.designation.invalid"
+      class="form-control" id="designation" placeholder="Enter Designation" name="designation" required>
+    <div *ngIf="userProfileFormControl.designation.touched && userProfileFormControl.designation.invalid"
+      class="text-danger">Please Enter Designation</div>
+  </div>
+  <div class="mb-3">
+    <label for="location" class="form-label">Location:</label>
+    <input formControlName="location" type="text"
+      [class.in-valid]="userProfileFormControl.location.touched && userProfileFormControl.location.invalid"
+      class="form-control" id="location" placeholder="Enter Location" name="location" required>
+    <div *ngIf="userProfileFormControl.location.touched && userProfileFormControl.location.invalid" class="text-danger">
+      Please Enter Location</div>
+  </div>
+  <button [disabled]="!userProfileForm.valid" (click)="postUserProfile()" type="submit"
+    class="btn btn-primary">{{buttonName}}</button>
+</form>
