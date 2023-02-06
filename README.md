@@ -25,3 +25,26 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## After Cloning Please do npm Install
+
+npm i
+
+Note: In This Application I Installed BootStarp 5, PrimeNG Angular Library.
+
+## For Server Please Install json-server by running below command
+
+json-server install
+
+## Navigate to src\app\mockApi\userProfiles.json to Run Json file.
+
+json-server --watch userProfiles.json
+
+## Finally you can use ng serve to see the UserProfile UI 
+
+
+## Pending Tasks::
+
+Still Few Issues are not resolved like Interfaces, Error Messages, Design Issues.
+
+
