@@ -37,10 +37,10 @@ export class UserProfileComponent implements OnInit {
   show(actionType: string, selectedUSer?: UserProfile) {
     const ref = this.dialogService.open(SharedComponent, {
       data: {
-        buttonName: actionType === 'add' ? 'SAVE USER' : 'UPDATE USER',
+        buttonName: actionType === 'Add' ? 'SAVE USER' : 'UPDATE USER',
         selectedUSer: selectedUSer
       },
-      header: 'Add User Profile Here',
+      header: `${actionType} User Profile Here`,
       width: '40%'
     });
 
